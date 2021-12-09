@@ -98,6 +98,7 @@ declare namespace nacl {
 declare interface nacl {
     randomBytes(n: number): Uint8Array;
     secretbox: nacl.secretbox;
+    sealedbox: nacl.sealedbox;
     scalarMult: nacl.scalarMult;
     box: nacl.box;
     sign: nacl.sign;
