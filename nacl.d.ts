@@ -24,6 +24,15 @@ declare namespace nacl {
         readonly overheadLength: number;
     }
 
+    export interface sealedbox {
+        (msg: Uint8Array, nonce: Uint8Array, publicKey: Unint8Array): Uint8Array;
+        open(msg: Uint8Array, nonce: Uint8Array, secretKey: Uint8Array): Uint8Array;
+        readonly nonceLength: number;
+        readonly overheadLength: number;
+        readonly publicKeyLength: number;
+        readonly secretKeyLength: number;
+    }
+
     export interface scalarMult {
         (n: Uint8Array, p: Uint8Array): Uint8Array;
         base(n: Uint8Array): Uint8Array;
